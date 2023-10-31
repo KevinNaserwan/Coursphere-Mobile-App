@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:projectkomputasibergerak/pages/Auth/signin.dart';
 
 class Signup extends StatefulWidget {
   const Signup({super.key});
@@ -32,15 +33,18 @@ class _SignupState extends State<Signup> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const SizedBox(height: 35),
-            Hero(
-              tag: 'splash',
-              child: Image.asset('assets/signup.png'),
+            const SizedBox(height: 5),
+            Center(
+              child: Hero(
+                tag: 'splash',
+                child: Image.asset('assets/signup.png'),
+              ),
             ),
             SizedBox(
-              height: 20.0,
+              height: 30.0,
             ),
             Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
                   'Create Account',
@@ -49,6 +53,180 @@ class _SignupState extends State<Signup> {
                     fontWeight: FontWeight.w600,
                     color: Color(0xFF000000),
                   ),
+                ),
+                SizedBox(height: 5.0),
+                Text(
+                  'Managing your tasks to create an account',
+                  style: TextStyle(
+                      fontSize: 12.0,
+                      fontWeight: FontWeight.w400,
+                      color: Color(0x80000000)),
+                )
+              ],
+            ),
+            SizedBox(
+              height: 22.0,
+            ),
+            Column(
+              children: [
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Username',
+                      style: TextStyle(
+                          fontSize: 14.0,
+                          fontWeight: FontWeight.w500,
+                          color: Color(0xFF000000)),
+                    ),
+                    SizedBox(height: 5.0),
+                    TextField(
+                      decoration: InputDecoration(
+                        hintText: 'Enter Your Username',
+                        prefixIcon: const Icon(Icons.person),
+                        filled: true,
+                        fillColor: const Color(0x66D9D9D9),
+                        border: InputBorder.none, // Menghapus garis tepi
+                        contentPadding: const EdgeInsets.all(
+                            17.0), // Padding untuk teks dalam TextField
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide
+                              .none, // Menghapus garis tepi ketika tidak dalam keadaan fokus
+                          borderRadius: BorderRadius.circular(
+                              10.0), // Sudut bulat sebesar 10
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide
+                              .none, // Menghapus garis tepi ketika dalam keadaan fokus
+                          borderRadius: BorderRadius.circular(
+                              10.0), // Sudut bulat sebesar 10
+                        ),
+                      ),
+                    ),
+                    SizedBox(height: 16.0),
+                    Text(
+                      'Email or Phone Number',
+                      style: TextStyle(
+                          fontSize: 14.0,
+                          fontWeight: FontWeight.w500,
+                          color: Color(0xFF000000)),
+                    ),
+                    SizedBox(height: 5.0),
+                    TextField(
+                      decoration: InputDecoration(
+                        hintText: 'Enter Your Phone Number',
+                        prefixIcon: const Icon(Icons.phone),
+                        filled: true,
+                        fillColor: const Color(0x66D9D9D9),
+                        border: InputBorder.none, // Menghapus garis tepi
+                        contentPadding: const EdgeInsets.all(
+                            17.0), // Padding untuk teks dalam TextField
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide
+                              .none, // Menghapus garis tepi ketika tidak dalam keadaan fokus
+                          borderRadius: BorderRadius.circular(
+                              10.0), // Sudut bulat sebesar 10
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide
+                              .none, // Menghapus garis tepi ketika dalam keadaan fokus
+                          borderRadius: BorderRadius.circular(
+                              10.0), // Sudut bulat sebesar 10
+                        ),
+                      ),
+                    ),
+                    SizedBox(height: 16.0),
+                    Text(
+                      'Password',
+                      style: TextStyle(
+                          fontSize: 14.0,
+                          fontWeight: FontWeight.w500,
+                          color: Color(0xFF000000)),
+                    ),
+                    SizedBox(height: 5.0),
+                    TextField(
+                      decoration: InputDecoration(
+                        hintText: 'Enter Your Password',
+                        prefixIcon: const Icon(Icons.lock),
+                        filled: true,
+                        fillColor: const Color(0x66D9D9D9),
+                        border: InputBorder.none, // Menghapus garis tepi
+                        contentPadding: const EdgeInsets.all(
+                            17.0), // Padding untuk teks dalam TextField
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide
+                              .none, // Menghapus garis tepi ketika tidak dalam keadaan fokus
+                          borderRadius: BorderRadius.circular(
+                              10.0), // Sudut bulat sebesar 10
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide
+                              .none, // Menghapus garis tepi ketika dalam keadaan fokus
+                          borderRadius: BorderRadius.circular(
+                              10.0), // Sudut bulat sebesar 10
+                        ),
+                      ),
+                    ),
+                    SizedBox(height: 38.0),
+                    ElevatedButton(
+                      onPressed: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (context) => const Signup(),
+                          ),
+                        );
+                      },
+                      style: ElevatedButton.styleFrom(
+                        // ignore: deprecated_member_use
+                        primary: const Color(
+                            0xFF406882), // Ganti dengan warna yang diinginkan
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15.0),
+                        ),
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 112.0,
+                            vertical: 12.0), // Margin kiri-kanan 28px
+                      ),
+                      child: const Text(
+                        'Create Account',
+                        style: TextStyle(
+                          fontSize: 16, // Ukuran font 16
+                        ),
+                      ),
+                    ),
+                    SizedBox(height: 28.0),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          'Already Have An Account?',
+                          style: TextStyle(
+                              fontSize: 12.0,
+                              fontWeight: FontWeight.w500,
+                              color: Color(0xFF000000)),
+                        ),
+                        ElevatedButton(
+                            onPressed: () {
+                              Navigator.of(context).push(MaterialPageRoute(
+                                  builder: (context) => const Signin()));
+                            },
+                            style: ButtonStyle(
+                              elevation: MaterialStateProperty.all(
+                                  0.0), // Menghilangkan shadowF
+                              backgroundColor:
+                                  MaterialStateProperty.all(Colors.transparent),
+                            ),
+                            child: Text(
+                              'Sign In',
+                              style: TextStyle(
+                                  fontSize: 12.0,
+                                  fontWeight: FontWeight.w500,
+                                  color: Color(0xFF6998AB),
+                                  decoration: TextDecoration.underline),
+                            )),
+                      ],
+                    )
+                  ],
                 )
               ],
             ) // Ga

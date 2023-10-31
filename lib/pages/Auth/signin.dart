@@ -211,7 +211,7 @@ class _SigninState extends State<Signin> {
                     )),
               ],
             ),
-            const SizedBox(height: 26.0),
+            const SizedBox(height: 18.0),
             const Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
