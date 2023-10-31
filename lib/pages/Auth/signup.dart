@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:projectkomputasibergerak/pages/Auth/signin.dart';
+import 'package:projectkomputasibergerak/pages/Auth/verification.dart';
 
 class Signup extends StatefulWidget {
   const Signup({super.key});
@@ -172,7 +173,7 @@ class _SignupState extends State<Signup> {
                       onPressed: () {
                         Navigator.of(context).push(
                           MaterialPageRoute(
-                            builder: (context) => const Signup(),
+                            builder: (context) => const Verify(),
                           ),
                         );
                       },
