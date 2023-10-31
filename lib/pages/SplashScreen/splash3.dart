@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../Auth/signup.dart';
+import '../Auth/signin.dart';
 
 class Splash3 extends StatelessWidget {
   const Splash3({super.key});
@@ -12,18 +12,18 @@ class Splash3 extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Container(
-              padding: EdgeInsets.only(
+              padding: const EdgeInsets.only(
                   top: 10, bottom: 10), // Padding atas dan bawah
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  SizedBox(height: 35),
+                  const SizedBox(height: 35),
                   Hero(
                     tag: 'splash',
                     child: Image.asset('assets/splash3.png'),
                   ), // Ganti 'your_image.png' dengan path gambar Anda
-                  SizedBox(height: 85), // Padding atas sebelum gambar
-                  Text(
+                  const SizedBox(height: 85), // Padding atas sebelum gambar
+                  const Text(
                     'All In One Learning',
                     style: TextStyle(
                         fontSize: 20,
@@ -31,8 +31,8 @@ class Splash3 extends StatelessWidget {
                         fontWeight: FontWeight.w600 // Warna teks hitam
                         ),
                   ),
-                  SizedBox(height: 28), // Padding bawah
-                  Text(
+                  const SizedBox(height: 28), // Padding bawah
+                  const Text(
                     'Forget about a for of paper all',
                     style: TextStyle(
                       fontSize: 14,
@@ -41,7 +41,7 @@ class Splash3 extends StatelessWidget {
                     ),
                     textAlign: TextAlign.center,
                   ),
-                  Text(
+                  const Text(
                     'knowledge in one learning !',
                     style: TextStyle(
                       fontSize: 14,
@@ -53,7 +53,7 @@ class Splash3 extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(height: 55),
+            const SizedBox(height: 55),
             Center(
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -61,48 +61,49 @@ class Splash3 extends StatelessWidget {
                   Container(
                     width: 9,
                     height: 9,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       shape: BoxShape.circle,
                       color: Color(0xFFD9D9D9),
                     ),
                   ),
-                  SizedBox(width: 13),
+                  const SizedBox(width: 13),
                   Container(
                     width: 9,
                     height: 9,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       shape: BoxShape.circle,
                       color: Color(0xFFD9D9D9),
                     ),
                   ),
-                  SizedBox(width: 13),
+                  const SizedBox(width: 13),
                   Container(
                     width: 30,
                     height: 9,
                     decoration: BoxDecoration(
                         shape: BoxShape.rectangle,
-                        color: Color(0xFF406882),
+                        color: const Color(0xFF406882),
                         borderRadius: BorderRadius.circular(50)),
                   ),
                 ],
               ),
             ),
-            SizedBox(height: 55),
+            const SizedBox(height: 55),
             ElevatedButton(
               onPressed: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (context) => const Signup(),
+                    builder: (context) => const Signin(),
                   ),
                 );
               },
               style: ElevatedButton.styleFrom(
+                // ignore: deprecated_member_use
                 primary:
-                    Color(0xFF406882), // Ganti dengan warna yang diinginkan
+                    const Color(0xFF406882), // Ganti dengan warna yang diinginkan
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(15.0),
                 ),
-                padding: EdgeInsets.symmetric(
+                padding: const EdgeInsets.symmetric(
                     horizontal: 157.0,
                     vertical: 12.0), // Margin kiri-kanan 28px
               ),

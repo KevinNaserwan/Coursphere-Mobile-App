@@ -18,18 +18,18 @@ class _HomePageState extends State<HomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Container(
-              padding: EdgeInsets.only(
+              padding: const EdgeInsets.only(
                   top: 10, bottom: 10), // Padding atas dan bawah
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  SizedBox(height: 35),
+                  const SizedBox(height: 35),
                   Hero(
                     tag: 'splash',
                     child: Image.asset('assets/splash1.png'),
                   ),
-                  SizedBox(height: 85), // Padding atas sebelum gambar
-                  Text(
+                  const SizedBox(height: 85), // Padding atas sebelum gambar
+                  const Text(
                     'Learn Anywhere Anytime',
                     style: TextStyle(
                         fontSize: 20,
@@ -37,8 +37,8 @@ class _HomePageState extends State<HomePage> {
                         fontWeight: FontWeight.w600 // Warna teks hitam
                         ),
                   ),
-                  SizedBox(height: 28), // Padding bawah
-                  Text(
+                  const SizedBox(height: 28), // Padding bawah
+                  const Text(
                     'You can learn all simple like a click, all',
                     style: TextStyle(
                       fontSize: 14,
@@ -47,7 +47,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                     textAlign: TextAlign.center,
                   ),
-                  Text(
+                  const Text(
                     'time is your discretion',
                     style: TextStyle(
                       fontSize: 14,
@@ -59,7 +59,7 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
             ),
-            SizedBox(height: 55),
+            const SizedBox(height: 55),
             Center(
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -69,23 +69,23 @@ class _HomePageState extends State<HomePage> {
                     height: 9,
                     decoration: BoxDecoration(
                         shape: BoxShape.rectangle,
-                        color: Color(0xFF406882),
+                        color: const Color(0xFF406882),
                         borderRadius: BorderRadius.circular(50)),
                   ),
-                  SizedBox(width: 13),
+                  const SizedBox(width: 13),
                   Container(
                     width: 9,
                     height: 9,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       shape: BoxShape.circle,
                       color: Color(0xFFD9D9D9),
                     ),
                   ),
-                  SizedBox(width: 13),
+                  const SizedBox(width: 13),
                   Container(
                     width: 9,
                     height: 9,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       shape: BoxShape.circle,
                       color: Color(0xFFD9D9D9),
                     ),
@@ -93,7 +93,7 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
             ),
-            SizedBox(height: 55),
+            const SizedBox(height: 55),
             ElevatedButton(
               onPressed: () {
                 Navigator.of(context).push(
@@ -103,12 +103,13 @@ class _HomePageState extends State<HomePage> {
                 );
               },
               style: ElevatedButton.styleFrom(
+                // ignore: deprecated_member_use
                 primary:
-                    Color(0xFF406882), // Ganti dengan warna yang diinginkan
+                    const Color(0xFF406882), // Ganti dengan warna yang diinginkan
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(15.0),
                 ),
-                padding: EdgeInsets.symmetric(
+                padding: const EdgeInsets.symmetric(
                     horizontal: 157.0,
                     vertical: 12.0), // Margin kiri-kanan 28px
               ),
