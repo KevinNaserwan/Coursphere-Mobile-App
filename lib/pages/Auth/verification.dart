@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:projectkomputasibergerak/pages/Auth/signin.dart';
-import 'package:projectkomputasibergerak/pages/Auth/signup.dart';
 
 class Verify extends StatefulWidget {
   const Verify({super.key});
@@ -110,27 +109,106 @@ class _VerifyState extends State<Verify> {
                         SizedBox(height: 133.0),
                         ElevatedButton(
                           onPressed: () {
-                            Navigator.of(context).push(
-                              MaterialPageRoute(
-                                builder: (context) => const Signup(),
-                              ),
+                            showDialog(
+                              context: context,
+                              builder: (BuildContext context) {
+                                return Dialog(
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(15.0),
+                                  ),
+                                  child: Container(
+                                    width: 335.0,
+                                    height: 400.0,
+                                    padding: EdgeInsets.only(
+                                        left: 20.0, right: 20.0),
+                                    decoration: BoxDecoration(
+                                      color: Color(0xFFFFFFFF),
+                                      borderRadius: BorderRadius.circular(15.0),
+                                    ),
+                                    child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Image.asset('assets/success.png',
+                                            width: 150.0, height: 150.0),
+                                        SizedBox(height: 5.0),
+                                        Text(
+                                          'Register Success',
+                                          style: TextStyle(
+                                            fontSize: 17.0,
+                                            fontWeight: FontWeight.w600,
+                                            color: Color(0xFF000000),
+                                          ),
+                                        ),
+                                        SizedBox(height: 5.0),
+                                        Text(
+                                          'Congratulation',
+                                          style: TextStyle(
+                                            fontSize: 12.0,
+                                            fontWeight: FontWeight.w400,
+                                            color: Color(0x80000000),
+                                          ),
+                                        ),
+                                        Text(
+                                          'your account already created',
+                                          style: TextStyle(
+                                            fontSize: 12.0,
+                                            fontWeight: FontWeight.w400,
+                                            color: Color(0x80000000),
+                                          ),
+                                        ),
+                                        SizedBox(height: 81.0),
+                                        ElevatedButton(
+                                          onPressed: () {
+                                            Navigator.of(context).push(
+                                              MaterialPageRoute(
+                                                builder: (context) =>
+                                                    const Verify(),
+                                              ),
+                                            );
+                                          },
+                                          style: ElevatedButton.styleFrom(
+                                            // ignore: deprecated_member_use
+                                            primary: const Color(
+                                                0xFF406882), // Ganti dengan warna yang diinginkan
+                                            shape: RoundedRectangleBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(15.0),
+                                            ),
+                                            padding: const EdgeInsets.symmetric(
+                                                horizontal: 110.0,
+                                                vertical:
+                                                    12.0), // Margin kiri-kanan 28px
+                                          ),
+                                          child: const Text(
+                                            'Continue',
+                                            style: TextStyle(
+                                              fontSize: 16, // Ukuran font 16
+                                            ),
+                                          ),
+                                        ),
+                                        SizedBox(height: 33.0),
+                                      ],
+                                    ),
+                                  ),
+                                );
+                              },
                             );
                           },
                           style: ElevatedButton.styleFrom(
-                            // ignore: deprecated_member_use
-                            primary: const Color(
-                                0xFF406882), // Ganti dengan warna yang diinginkan
+                            primary: const Color(0xFF406882),
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(15.0),
                             ),
                             padding: const EdgeInsets.symmetric(
-                                horizontal: 142.0,
-                                vertical: 12.0), // Margin kiri-kanan 28px
+                              horizontal: 142.0,
+                              vertical: 12.0,
+                            ),
                           ),
                           child: const Text(
                             'Submit',
                             style: TextStyle(
-                              fontSize: 16, // Ukuran font 16
+                              fontSize: 16,
                             ),
                           ),
                         ),
